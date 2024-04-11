@@ -1,7 +1,3 @@
-Senior Financial analyst
+Senior Financial analyst - Data Analytics and Data Science
 
-Data Analytics and Data Science
-
-Fan of Process Improvement
-
-Personal Development
+Fan of Process Improvement and Personal Development
