@@ -29,7 +29,7 @@ The list of tasks is already well defined, so I started to write down procedures
 
 I started to create a function to check if the folder with the name that I wanted to use already exists. The function takes whatever string that I put as a parameter and checks if the same directory exists or not. If there already is one, it will return True.
 
-```vb
+```
 Function FolderExists(ByVal Path As String) As Boolean
 
     FolderExists = False
@@ -42,7 +42,7 @@ End Function
 
 Then I defined the directory of the folder where the new daily folders are saved. I wanted the format of the date used in the folder to be like “May 20 2023 – M”
 
-```vb
+```
 PathName = "K:\the directory of the folder that I am checking\"
 FolderName = MonthName(DatePart("m", Date), False) & _
     " " & Day(Date) & _
