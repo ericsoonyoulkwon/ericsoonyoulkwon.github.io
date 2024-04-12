@@ -4,6 +4,8 @@ Writing a macro to automate folder editing and Excel reports because I want to a
 
 #### Category: MS Excel & VBA
 
+---
+
 
 ### So what is currently done manually?
 
