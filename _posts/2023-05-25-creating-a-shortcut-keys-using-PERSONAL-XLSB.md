@@ -113,7 +113,7 @@ First, you will need to make the PERSONAL.XLSB visible. Under the View ribbon, c
 
 You are now able to see the personal binary workbook window. The code pasted for five macros is all there when Macros under Developer are clicked on. Select one of them and click Options.
 
-![choose-personal-macro](/../main/images/choose-personal-macro.png)
+![choose-personal-macro](/images/choose-personal-macro.png)
 
 You can assign a key. I always try to use the key that is intuitive enough and aligns with the action. I thought B would be great for the black font. When I create my own shortcut keys in this way, I always try to avoid using Ctrl + [key] as a shortcut key because there could be default shortcut keys built in Excel and you don’t want your macros to overlap the pre-defined ones. For example, Ctrl + B is for making the font bolded. So, what I do is hold the Shift key until I see the “+Shift+” pops up, then press the desired key. Click ok then the macro black_font is going to be run when Ctrl+Shift+B is pressed. Finish repeating to assign shortcut keys to the rest of the macros.
 
