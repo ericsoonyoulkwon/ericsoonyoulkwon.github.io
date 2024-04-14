@@ -15,7 +15,7 @@ I would like to share a few things that I do at work to help people follow what 
 
 Did somebody just call me?
 
-![big-purple-mouse-cursor](/../main/_images/big-purple-mouse-cursor.png)
+![big-purple-mouse-cursor](/_images/big-purple-mouse-cursor.png)
 
 I noticed that I keep moving my mouse pointer to where I am explaining. So, I came up with an idea to make my mouse pointer slightly bigger with distinct colours so people can easily find where I am. Go to mouse pointer (also called mouse properties) and customize it. Too much of anything is bad for you. I guess you don’t want to offend someone with a ridiculously huge cursor. It may make you look unprofessional if it is too big. Below is my current mouse pointer setting.
 
