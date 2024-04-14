@@ -52,7 +52,7 @@ Below are five colour changes to font or fill I frequently make. I always use co
 – fill_yellow: manual input fields in templates. I use Ctrl + Shift + Y
 – unfill: to erase the yellow. I use Ctrl + Shift + U
 
-'''
+```
 Sub red_font()
 ' Keyboard Shortcut: Ctrl+Shift+R
     With Selection.Font
@@ -94,7 +94,7 @@ Sub Unfill()
         .PatternTintAndShade = 0
     End With
 End Sub
-'''
+```
 
 Open VBA editor (Alt + F11). Module 1 should be already created because you attempted to record something. Double-click on Module 1 and delete everything in it because it doesn’t really contain any macro when you immediately stopped recording.
 
