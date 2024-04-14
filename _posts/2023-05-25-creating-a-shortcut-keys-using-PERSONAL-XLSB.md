@@ -125,6 +125,6 @@ Hide the personal binary workbook back. Otherwise, the workbook will be visible 
 
 When you try to close Excel, it will ask you if you want to save the changes you made to the Personal workbook. Make sure you save them. You are ready to use the shortcut keys.
 
-![save-personal-macro](/../main/images/save-personal-macro.png)
+![save-personal-macro](/../main/_images/save-personal-macro.png)
 
 Although I found all of the above ideas helpful for explaining something when I share my screen remotely, I’ve been using them even before the pandemic started because looking at the same screen together in the office is screen-share at the end. I hope you find them useful and please feel free to contact me if you want to share your tips.
