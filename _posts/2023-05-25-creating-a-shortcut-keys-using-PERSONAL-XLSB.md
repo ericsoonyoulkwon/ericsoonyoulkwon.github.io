@@ -37,7 +37,7 @@ I also started to use this to draw attention to my screen and found it actually 
 
 This is basically creating macros that can run on any workbook. Yes, any. You will record a macro stored in the “Personal Macro Workbook“. You are going to stop recording macro as soon as you started to record it. In most cases, macros stored in the workbook that it was recorded on can only be run on the same workbook. However, the macros recorded and stored in the personal macro workbook can be run on any Excel workbook.
 
-![create-personal-macro](../main/_images/create-personal-macro.png)
+![create-personal-macro](/../main/_images/create-personal-macro.png)
 
 Yes, I said stop recording as soon as it starts. Recording nothing? Sounds weird, isn’t it? This is just to create a hidden workbook called PERSONAL.XLSB that runs as long as Excel is opened. If you have never created any macro stored in the personal macro workbook before, this will create one. FYI, below is where the workbook is saved although you don’t necessarily need to know.
 
@@ -125,6 +125,6 @@ Hide the personal binary workbook back. Otherwise, the workbook will be visible 
 
 When you try to close Excel, it will ask you if you want to save the changes you made to the Personal workbook. Make sure you save them. You are ready to use the shortcut keys.
 
-![save-personal-macro](../main/images/save-personal-macro.png)
+![save-personal-macro](/../main/images/save-personal-macro.png)
 
 Although I found all of the above ideas helpful for explaining something when I share my screen remotely, I’ve been using them even before the pandemic started because looking at the same screen together in the office is screen-share at the end. I hope you find them useful and please feel free to contact me if you want to share your tips.
