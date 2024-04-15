@@ -70,4 +70,4 @@ CASE
 END
 ```
 
-#### So, I won’t need to hardcode the date that I am querying every day when it is defined in the query itself what date it should look for. This doesn’t really save my time, I would say 2 minutes per day. However, without eliminating the manual hardcoding of the date in the process, [automating the daily task](_posts/2023-05-21-automating-daily-report-with-VBA.md) wouldn’t have been achieved.
+#### So, I won’t need to hardcode the date that I am querying every day when it is defined in the query itself what date it should look for. This doesn’t really save my time, I would say 2 minutes per day. However, without eliminating the manual hardcoding of the date in the process, [automating the daily task](/2023-05-21-automating-daily-report-with-VBA.md) wouldn’t have been achieved.
