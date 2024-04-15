@@ -1,10 +1,10 @@
 # How I started office automation
 
+Throwback – My first job
+
 #### Category: Diaries & Journals
 
 ---
-
-### Throwback – My first job
 
 ### Pressure and motivation
 
