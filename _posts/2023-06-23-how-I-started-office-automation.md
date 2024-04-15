@@ -23,6 +23,7 @@ Back to the story of my first job, I noticed that there were some processes that
 Having no prior experience in writing any script, it was tough but the learning curve was stiff. Every line of it was challenging but the Google was my prof. Most questions that I had for subsets of the procedures were already asked and answered in Stack Overflow but I sometimes had to invent my own solution. It seemed that controlling the AS400-based payroll system via Excel VBA was impossible, at least on my level at the time. So, I had to come up with a walkaround and decided to break up the process into two. When I noticed that the AS400 saves its macros in .txt format (Now I know it is in .vbs format to be more accurate), I decided to create the macro script in the text file that the system could read. So, exporting the setup or employee data from the CSV files into the text format that could be read by the payroll system solved the issue. Well, there was no free lunch. It was usual that I had to stay at the company till 8 or 9 in an empty office but I considered that an investment.
 
 ![entering-data-from-csv-file-to-as400](/images/entering-data-from-csv-file-to-as400.gif)
+
 Entering data from the CSV file to AS400
 
 ### Gaining more responsibilities
@@ -32,6 +33,7 @@ Now I have hours saved. As I kept proving that I could do better than what they 
 The other project that I really enjoyed was streamlining the submission process of forms where I automated the printing of them so the physical copies can be stored in branch managers’ cabinets, saving the file in the network folder for the corporate office’s record-keeping purposes, and sending an email with the attachment to the corporate processing team’s shared email so the request sits in the inbox until it gets processed. All of them were designed to be done right with a single click on the submit button to prevent misplacement of the files and enable tracking of whether the request was processed or not. The whole point was to maintain the integrity of the process by eliminating the processes instead of expecting the branch managers to follow SOPs.
 
 ![print-save-and-send](/images/print-save-and-send.gif)
+
 Print, save and send
 
 ### Lending a hand to others
@@ -39,6 +41,7 @@ Print, save and send
 Not all coworkers were not happy with the changes that I brought to the team. It was even way before people started talking about ‘AI’ and most people thought automating tasks would make human labour obsolete. My first offer of help with sharing the macro template of data entry was actually turned down by the data entry clerk when she was scared of losing her job and would not be able to find the other one. I found my skills and mindset were mostly welcomed by the younger supervisors who would be more likely to take risks to climb up the corporate ladder. When I walked by someone and saw something I can make their life easier, I didn’t hesitate to offer help but it was absolutely up to them to take it or not. One example was to split a big batch file into 51 smaller ones when each 51 branch managers was not supposed to see the data belonging to the other branches. When the process of ‘filtering data -> saving as a new file with the filtered data -> unfiltering the data’ was repeated 51 times on a bi-weekly basis, it seemed a pretty boring task and it was a no-brainer offer.
 
 ![filter-save-the-subset-and-send](/images/filter-save-the-subset-and-send.gif)
+
 Filter, save the subset and send
 
 ### Final words
