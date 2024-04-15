@@ -82,7 +82,31 @@ As expected, no luck with this approach. I couldn’t find the list of the FK co
 
 Alternatively, I came up with the idea of gathering all column information and identifying PK and FK myself. First off, get a list of all tables and columns from tables ALL_TABLES and ALL_TAB_COLUMNS, respectively.
 
-![all-tables-and-columns](/images/all-tables-and-columns.png)
+```SQL
+SELECT
+    t.OWNER,
+    t.TABLE_NAME,
+    t.NUM_ROWS,
+    c.COLUMN_ID,
+    c.COLUMN_NAME,
+    c.NUM_DISTINCT,
+    c.DATA_TYPE,
+    c.NULLABLE,
+    c.NUM_NULLS
+FROM
+    ALL_TAB_COLUMNS c
+INNER JOIN
+    (
+        SELECT *
+        FROM ALL_TABLES
+        WHERE ALL_TABLES.NUM_ROWS > 0
+    ) t
+    ON t.TABLE_NAME = c.TABLE_NAME
+WHERE t.TABLE_NAME LIKE 'CI%'
+ORDER BY
+    t.TABLE_NAME ASC,
+    c.COLUMN_ID ASC
+```
 
 Then I utilized the number of rows in each table (t.NUM_ROWS) and the number of distinct values in each row (c.NUM_DISTINCT) to identify the primary key. So, among many columns with identical names, I can tell it is the primary key of the table when the number of rows in the table is the same as the number of distinct values in the columns because there should be no duplicated values in the primary key column. The rest of the columns with the same name are foreign keys assuming that there is no exception to the column name convention that the FK column name is identical to that of the PK column
 
