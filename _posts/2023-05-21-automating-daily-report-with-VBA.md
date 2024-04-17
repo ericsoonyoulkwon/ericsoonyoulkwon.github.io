@@ -25,7 +25,7 @@ The query was already proven to be reliable as I run it every day and I already 
 
 ### Let’s get down to business
 
-The list of tasks is already well defined, so I started to write down procedures on the VBA editor built in MS Excel. Please feel free to contact me for any suggestions.
+The list of tasks is already well defined, so I started to write down procedures on the VBA editor built in MS Excel. Please feel free to [contact me](ericsoonyoulkwon@gmail.com){:target="_blank"} for any suggestions.
 
 #### Check if there is already a folder with the same name
 
