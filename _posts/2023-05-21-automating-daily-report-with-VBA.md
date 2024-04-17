@@ -29,7 +29,7 @@ The list of tasks is already well defined, so I started to write down procedures
 
 #### Check if there is already a folder with the same name
 
-I started to create a function to check if the folder with the name that I wanted to use already exists. The function takes whatever string that I put as a parameter and checks if the same directory exists or not. If there already is one, it will return True.
+I started to **create a function** to check if the folder with the name that I wanted to use already exists. The function takes whatever string that I put as a parameter and checks if the same directory exists or not. If there already is one, it will return True.
 
 ```
 Function FolderExists(ByVal Path As String) As Boolean
@@ -52,7 +52,7 @@ FolderName = MonthName(DatePart("m", Date), False) & _
     " - M"
 ```
 
-Now I call the function that I just created to check if the directory of the folder with today’s date exists or not. If it doesn’t exist and the function returns False, it will proceed with the code that I write in the section after ‘Then’. Otherwise, it will prompt a message box to tell me the folder already exists with no further actions.
+Now I **call the function** that I just created to check if the directory of the folder with today’s date exists or not. If it doesn’t exist and the function returns False, it will proceed with the code that I write in the section after ‘Then’. Otherwise, it will prompt a message box to tell me the folder already exists with no further actions.
 
 ```
 If Not FolderExists(PathName & FolderName) Then
@@ -64,7 +64,7 @@ End if
 
 #### Create a folder if there isn’t already one
 
-Then I began to write things that I wanted to execute when there was no folder with today’s date. Of course, creating the folder is the first thing that I would do. To access and modify files and folders, I needed to use the file system object of MS Scripting Library. It was optional that I included the library name ‘scripting’ just to add more clarity when I create the object even if I didn’t see there is potential ambiguity when there isn’t another library with the same object name `filesystemobject`.
+Then I began to write things that I wanted to execute when there was no folder with today’s date. Of course, creating the folder is the first thing that I would do. To access and modify files and folders, I needed to use the file system **object** of MS Scripting **Library**. It was optional that I included the library name ‘scripting’ just to add more clarity when I create the object even if I didn’t see there is potential ambiguity when there isn’t another library with the same object name `filesystemobject`.
 
 After concatenating PathName and FolderName, I am creating a folder. (i.e. “K:\the directory of the folder that I am checking\May 20 2023 – M”) The FTP application that I am going to log in as the last step of the process has access to the folder so I don’t need to see it in the file explorer. It was an optional step for adding visibility.
 
@@ -77,7 +77,7 @@ Call Shell("explorer.exe" & " " & PathName & FolderName, vbNormalFocus)
 
 #### The folder is created. Now what? Gotta finish the report!
 
-The tasks are very light and won’t take up much memory but I prefer not to see every single change in Excel so I usually turn off the screen update and turn it back on at the end of the script. I found this helps lower the chance of seeing the grey frozen screen with the notorious “(Not Responding)” message and losing the data of all unsaved workbooks.
+The tasks are very light and won’t take up much memory but I prefer not to see every single change in Excel so I usually **turn off the screen update and turn it back on at the end** of the script. I found this helps lower the chance of seeing the grey frozen screen with the notorious “(Not Responding)” message and losing the data of all unsaved workbooks.
 
 The template is pasted to the folder just created and named with the date at the end of the file name. (i.e. the name of the file to be sent out will be like “file name-20230520.xlsm, the macro-enabled file that automatically updates its headers according to the date in the file name when it’s opened and prints the report as PDF when it is closed.)
 
@@ -93,7 +93,7 @@ FileCopy Template, NewFile
 
 Then the Excel file with a table where the SQL query is built is opened, the table is refreshed, and the script is set to wait until the query is refreshed. No one wants the empty table to be copied and pasted if it happens too soon.
 
-I always prefer to count the last rows, and columns if necessary, of the sheet and copy the right amount of data so there is no waste of memory and time. For the same reason, I want this to be done only when there is data to be reported as there sometimes are days with no data interfaced and the report would be empty with just column headers.
+I always prefer to **count the last rows**, and columns if necessary, of the sheet and copy the right amount of data **so there is no waste** of memory and time. For the same reason, I want this to be done only when there is data to be reported as there sometimes are days with no data interfaced and the report would be empty with just column headers.
 
 ```
 Sqlquery = "K:\where I saved an excel file with the SQL query\an excel file with the ODBC connection to the server that the query script can be run on.xlsm"
@@ -114,7 +114,7 @@ If lastRowCopy > 2 Then _
         Paste:=xlPasteValues
 ```
 
-When the client requires to use the same file name for the PDF version, I take the name of the file without “.xlms”, save it as pdf, then save and close the Excel file.
+When the client requires to use the same file name for the PDF version, I take the name of the file without “.xlms”, **save it as pdf**, then save and close the Excel file.
 
 ```
 With wsDest
@@ -131,7 +131,7 @@ End With
 
 There is no guarantee that all records received via the interface are necessarily processed by the application. Traditionally, this could be checked by comparing the number of records in the XML file received and the number of records processed and captured in the SQL query.
 
-I decided to take advantage of certain elements tagged to each record in an XML file. So, I was able to count the records received on the evening of the previous business day. When an XML file is opened and closed by Excel, there are a series of pop-ups that will halt the automated process. So, I disabled alerts and reactivated them at the end. Simply incrementing (aka rolling-sum) the variable by 1 when there is a row with the tagging element would result in the number of records received. I am going to include the reconciliation between the record count in XML received and the record processed in the SQL query in the message box that will pop up at the end of the automated process.
+I decided to take advantage of certain elements tagged to each record in an XML file. So, I was able to count the records received on the evening of the previous business day. When an XML file is opened and closed by Excel, there are a series of pop-ups that will halt the automated process. So, I disabled alerts and reactivated them at the end. Simply **incrementing (aka rolling-sum) the variable by 1 when there is a row with the tagging element** would result in the number of records received. I am going to include the reconciliation between the record count in XML received and the record processed in the SQL query in the message box that will pop up at the end of the automated process.
 
 ```
 Application.DisplayAlerts = False
@@ -154,11 +154,11 @@ Application.EnableEvents = True
 
 #### A little bit trickier to count the records processed and included in the report
 
-The SQL report is the summary of the action items created by the system and it is possible that one record interfaced creates more than one item in the system. So, simply comparing the number of records in the interface that I just counted above against the number of rows in the SQL report is not going to help reconciliation.
+The SQL report is the summary of the action items created by the system and _it is possible that one record interfaced creates more than one item in the system_. So, simply comparing the number of records in the interface that I just counted above against the number of rows in the SQL report is not going to help reconciliation.
 
 My goal here is to get 1 for each record as duplicates don’t count. I was almost going to increment a variable by 1 whenever I came across a new record by skipping the records already counted. Then, I thought creating and appending the array of new records and checking duplicates against the array takes more memory than the following simpler solution.
 
-Keeping the same goal of having 1 for each unique record, I started to categorize the types of records based on the occurrence. First of all, there will be records that occur only once with no duplicates. However, there could be unlimited cases for duplicated records when it can create how many ever action-items in the system. It is a one-or-many situation. So, I tried summing the product of dividing 1 by the occurrence of the record will result in 1 for all unique records (n * 1/n = 1) and it worked.
+Keeping the same goal of having 1 for each unique record, I started to categorize the types of records based on the occurrence. First of all, there will be records that occur only once with no duplicates. However, there could be unlimited cases for duplicated records when it can create how many ever action-items in the system. It is a **one-or-many situation**. So, I tried **summing the product of dividing 1 by the occurrence of the record will result in 1 for all unique records** (n * 1/n = 1) and it worked.
 
 ```
 Set report = wsDest.Worksheets("Report")
@@ -198,9 +198,9 @@ Application.Wait (Now + TimeValue("00:00:05"))
 Application.SendKeys ("~")
 ```
 
-Finally, showing a message box that reminds me what to do next such as final quality check and upload.
+Finally, showing a **message box** that reminds me what to do next such as final quality check and upload.
 
-Not sure why, but I noticed that the Number lock is on when SendKeys is executed. So, I always turn it off after I use the SenKeys prompt so that users don’t get surprised when they use the number pad.
+Not sure why, but I noticed that the Number lock is on when **SendKeys** is executed. So, I always turn it off after I use the SenKeys prompt so that users don’t get surprised when they use the number pad.
 
 Also, the data types of variables used were declared.
 
@@ -228,8 +228,4 @@ Dim inbound_xml As Excel.Workbook
 
 After I spent a maximum of 5 hours to automate the report preparation, the estimated time that I spend on the series of procedures is a minimum of 5 minutes every day and it would be around 20 hours a year assuming there are 250 working days in a year if I still do this manually. Plus, we have mirrored teams with identical responsibilities for two of our clients and this means the benefit of this will be doubled when one of my coworkers can save their time too. I do not doubt that this adds value when benefits outweigh costs, both measured in time.
 
-Automating no-brainer tasks, I can spend more time with more valuable work now.
-
-
-
-
+**Automating no-brainer tasks, I can spend more time with more valuable work now**.
