@@ -35,15 +35,15 @@ I also started to use this to draw attention to my screen and found it actually 
 
 ### Main dish – Creating PERSONAL.XLSB to personalize shortcut keys
 
-This is basically creating macros that can run on any workbook. Yes, any. You will record a macro stored in the “Personal Macro Workbook“. You are going to stop recording macro as soon as you started to record it. In most cases, macros stored in the workbook that it was recorded on can only be run on the same workbook. However, the macros recorded and stored in the personal macro workbook can be run on any Excel workbook.
+This is basically creating **macros that can run on any workbook**. Yes, any. You will record a macro stored in the "**Personal Macro Workbook**". You are going to stop recording macro as soon as you started to record it. In most cases, macros stored in the workbook that it was recorded on can only be run on the same workbook. However, the macros recorded and stored in the personal macro workbook can be run on any Excel workbook.
 
 ![create-personal-macro](/images/create-personal-macro.png)
 
-Yes, I said stop recording as soon as it starts. Recording nothing? Sounds weird, isn’t it? This is just to create a hidden workbook called PERSONAL.XLSB that runs as long as Excel is opened. If you have never created any macro stored in the personal macro workbook before, this will create one. FYI, below is where the workbook is saved although you don’t necessarily need to know.
+Yes, I said stop recording as soon as it starts. Recording nothing? Sounds weird, isn’t it? This is just to create a hidden workbook called **PERSONAL.XLSB that runs as long as Excel is opened**. If you have never created any macro stored in the personal macro workbook before, this will create one. FYI, below is where the workbook is saved although you don’t necessarily need to know.
 
 ![personal-macro-xlsb](/images/personal-macro-xlsb.png)
 
-The type of the file is MS Excel Binary worksheet and the B in the file format XLSB stands for Binary. Some of you may already have had an experience where you were forced by Excel to save your work in XLSB format when the file became too big to be saved in regular XML-based .xlsx format. To make the explanation more straightforward, the same amount of data can be saved in a binary workbook much smaller than an ordinary Excel workbook in XML format. And it is capable of storing macros or VBA scripts. So, you have a file capable of storing and running macros that open as soon as Excel starts but is hidden and small enough so it won’t affect the performance of other Excel workbooks. These characteristics of the XLSB format are essential for macros that run on any Excel file.
+The type of the file is MS Excel Binary worksheet and the B in the file format XLSB stands for Binary. Some of you may already have had an experience where you were forced by Excel to save your work in XLSB format when the file became too big to be saved in regular XML-based .xlsx format. To make the explanation more straightforward, the same amount of data can be saved in a binary workbook much smaller than an ordinary Excel workbook in XML format. And it is capable of storing macros or VBA scripts. So, you have a file capable of storing and running macros that **open as soon as Excel starts but is hidden and small enough so it won’t affect the performance of other Excel workbooks**. These characteristics of the XLSB format are essential for macros that run on any Excel file.
 
 Below are five colour changes to font or fill I frequently make. I always use colours in consistent ways so that people always know what it implies when I use a certain colour in my presentation.
 – red_font: something negative. I use Ctrl + Shift + R
@@ -107,7 +107,7 @@ Try copying the codes I shared above and paste them into the code section of Mod
 
 Before you would be able to use shortcut keys for them, you need to assign shortcut keys to each macro.
 
-First, you will need to make the PERSONAL.XLSB visible. Under the View ribbon, click Unhide and double-click on PERSONAL. This is because changing macro options such as adding the shortcut key is only allowed when the workbook where the macros are stored is visible.
+First, you will need to make the PERSONAL.XLSB visible. Under the View ribbon, click Unhide and double-click on PERSONAL. This is because changing macro options such as **adding the shortcut key is only allowed when the workbook where the macros are stored is visible**.
 
 ![unhide-personal-macro-file](/images/unhide-personal-macro-file.png)
 
@@ -115,7 +115,7 @@ You are now able to see the personal binary workbook window. The code pasted for
 
 ![choose-personal-macro](/images/choose-personal-macro.png)
 
-You can assign a key. I always try to use the key that is intuitive enough and aligns with the action. I thought B would be great for the black font. When I create my own shortcut keys in this way, I always try to avoid using Ctrl + [key] as a shortcut key because there could be default shortcut keys built in Excel and you don’t want your macros to overlap the pre-defined ones. For example, Ctrl + B is for making the font bolded. So, what I do is hold the Shift key until I see the “+Shift+” pops up, then press the desired key. Click ok then the macro black_font is going to be run when Ctrl+Shift+B is pressed. Finish repeating to assign shortcut keys to the rest of the macros.
+You can assign a key. I always try to use the key that is intuitive enough and aligns with the action. I thought B would be great for the black font. When I create my own shortcut keys in this way, I always try to avoid using Ctrl + [key] as a shortcut key because there could be default shortcut keys built in Excel and you don’t want your macros to overlap the pre-defined ones. For example, Ctrl + B is for making the font bolded. So, what I do is **hold the Shift key until I see the “+Shift+” pops up**, then press the desired key. Click ok then the macro black_font is going to be run when Ctrl+Shift+B is pressed. Finish repeating to assign shortcut keys to the rest of the macros.
 
 ![assign-shortcut](/images/assign-shortcut.png)
 
