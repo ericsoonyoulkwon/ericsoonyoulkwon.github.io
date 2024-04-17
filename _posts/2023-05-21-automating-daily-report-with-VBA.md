@@ -21,7 +21,7 @@ One of my daily tasks is to create a response report for the data interfaced fro
 8. Logging in to our ERP and reconciling the number of data in the report
 9. Opening the shared file-transfer-protocol (sFTP) application and log in to upload the Excel and PDF files
 
-The query was already proven to be reliable as I run it every day and I already customized the SQL script and Excel ODBC connection to the server so it runs automatically as soon as the file is opened and [grabs all data transmitted on the evening of the previous business day](https://ericsoonyoulkwon.github.io/2023/06/02/selecting-data-transacted-on-previous-business-day.html). (i.e. The query captures the data for Friday when I run the script on Monday. It also captures the interface on Thursday or Friday when it was a long weekend that I didn’t run the report on Friday or Monday, respectively.)
+The query was already proven to be reliable as I run it every day and I already customized the SQL script and Excel ODBC connection to the server so it runs automatically as soon as the file is opened and [grabs all data transmitted on the evening of the previous business day](https://ericsoonyoulkwon.github.io/2023/06/02/selecting-data-transacted-on-previous-business-day.html){:target="_blank"}. (i.e. The query captures the data for Friday when I run the script on Monday. It also captures the interface on Thursday or Friday when it was a long weekend that I didn’t run the report on Friday or Monday, respectively.)
 
 ### Let’s get down to business
 
