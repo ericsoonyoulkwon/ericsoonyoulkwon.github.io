@@ -7,7 +7,10 @@
 ### Definition: [Fibonacci sequence – Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_sequence)
 
 Defining a function to return the n-th Fibonacci numbers,
+
 and returning the results depending on the maximum iterations you want to perform.
+
+To prevent the input from automatically being printed along with the result, I added a string in front of the input so that I could make the result and input separated.
 
 ```python3
 # n-th element of the Fibonacci sequence
@@ -28,12 +31,12 @@ mx = int(input("How many Fibonacci numbers do you need? "))
 for i in range(1,mx+1):
     print(n_fibonacci(i))
 ```
-To prevent the input from automatically being printed along with the result, I added a string in front of the input so that I could make the result and input separated.
 
 Depending on the computational power available to you, enter the number of Fibonacci numbers you want to see.
+
 I will enter 20 as an example.
 
-Result
+Result:
 
 ```python3
 How many Fibonacci numbers do you need? 20
