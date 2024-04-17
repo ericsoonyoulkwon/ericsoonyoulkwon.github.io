@@ -9,7 +9,7 @@
 Defining a function to return the n-th Fibonacci numbers,
 and returning the results depending on the maximum iterations you want to perform.
 
-```python
+```python3
 # n-th element of the Fibonacci sequence
  
 def n_fibonacci (n):
@@ -35,7 +35,7 @@ I will enter 20 as an example.
 
 Result
 
-```python
+```python3
 How many Fibonacci numbers do you need? 20
 0
 1
