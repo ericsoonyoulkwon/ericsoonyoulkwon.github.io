@@ -6,7 +6,7 @@
 
 ### Definition: [Fibonacci sequence – Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_sequence)
 
-defining a function to return the Fibonacci numbers
+Defining a function to return the Fibonacci numbers,
 and returning the results depending on the maximum iterations you want to perform.
 
 ```python
