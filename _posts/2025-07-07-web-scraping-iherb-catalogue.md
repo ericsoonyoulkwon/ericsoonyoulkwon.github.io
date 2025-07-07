@@ -1,4 +1,4 @@
-# Working in progress - Web Scraping to Create a Catalogue of iHerb Nutrition Supplements
+# Project completed / article working in progress - Web Scraping to Create a Catalogue of iHerb Nutrition Supplements
 
 #### Category: Python
 
