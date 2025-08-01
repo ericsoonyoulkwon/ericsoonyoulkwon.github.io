@@ -1,4 +1,4 @@
-# Project completed / article working in progress - Windows 11 Startup Automation: Open Everything You Need Right When You Log In
+# Windows 11 Startup Automation: Open Everything You Need Right When You Log In
 
 #### Category: Productivity
 
