@@ -6,11 +6,13 @@ hr {
 /* Post navigation links */
 .post_navi {
   display: flex;
+  background-color: #000; /* inverted background */
+  color: #fff; /* text stays readable */
 }
 
 .post_navi-label {
   font-size: 0.8em;
-  opacity: 0.5;
+  opacity: 0.7; /* bumped a bit for contrast */
 }
 
 .post_navi .post_navi-item {
@@ -41,11 +43,5 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5em;
-  opacity: 0.3;
-}
-
-/* ===== Global Dark Mode ===== */
-body.dark-mode {
-  filter: invert(1) hue-rotate(180deg);
-  transition: all 0.3s ease;
+  opacity: 0.5; /* increased for better visibility on dark background */
 }
