@@ -6,13 +6,11 @@ hr {
 /* Post navigation links */
 .post_navi {
   display: flex;
-  background-color: #000; /* inverted background */
-  color: #fff; /* text stays readable */
 }
 
 .post_navi-label {
   font-size: 0.8em;
-  opacity: 0.7; /* bumped a bit for contrast */
+  opacity: 0.5;
 }
 
 .post_navi .post_navi-item {
@@ -43,5 +41,14 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.5em;
-  opacity: 0.5; /* increased for better visibility on dark background */
+  opacity: 0.3;
+}
+
+/* === Inverted Cursor (white with black outline) === */
+body {
+  cursor: url("data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>
+      <polygon points='0,0 0,32 10,22 16,30 20,28 14,20 24,20'
+        fill='white' stroke='black' stroke-width='2'/>
+    </svg>") 0 0, auto;
 }
