@@ -43,3 +43,9 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+/* ===== Global Dark Mode ===== */
+body.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+  transition: all 0.3s ease;
+}
