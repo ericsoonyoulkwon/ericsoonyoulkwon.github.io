@@ -20,6 +20,7 @@ You’ll discover:
 - How to compare iHerb landed cost vs. market prices to spot potential margin
 
 **Ethics & Legal Note**
+
 Always review and respect each site’s Terms of Service and robots policies before scraping. Use responsible rate limits, identify your client politely, and avoid disrupting services.
 
 
