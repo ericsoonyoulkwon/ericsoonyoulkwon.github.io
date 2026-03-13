@@ -1,3 +1,8 @@
 Senior Financial analyst - Data Analytics and Data Science
 
-Dataphilic | Automation Innovator
+Dataphilic
+Automation Innovator
+Analytics Strategy
+Data Governance & Quality
+Continuous Improvement Leadership
+
