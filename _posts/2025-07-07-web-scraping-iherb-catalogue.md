@@ -25,7 +25,7 @@ Always review and respect each site’s Terms of Service and robots policies bef
 
 ## Step 1: Set Up Selenium and Your Project
 
-We’ll use **Microsoft Edge (Chromium)** with Selenium. iHerb blocks fully headless runs, so we’ll run a regular browser session with a realistic User‑Agent and a few anti‑automation flags.
+I've used **Microsoft Edge (Chromium)** with Selenium. iHerb blocks fully headless runs, so, I ran a regular browser session with a realistic User‑Agent and a few anti‑automation flags.
 
 
 **Install the required packages**
@@ -47,11 +47,13 @@ for package in packages:
 
 **Place the WebDriver**
 Download **msedgedriver.exe** that matches your Edge version and place it in a known folder (e.g., alongside your project scripts).
+
 Update in 2026: selenium version 4.* and above can automatically download the necessary web-driver and this step is not required.
 
 
 ## Step 2: Build Utilities and Initialize the WebDriver
-We’ll add logging, retry helpers, a unique file‑naming function, and Edge options. Shortcuts let us resume where we left off and keep outputs organized by date.
+
+We’ll add logging, retry helpers, a unique file‑naming function, and Edge options. Shortcuts let us resume where we left off and keep outputs organized by date for repeated iterations in the future.
 
 ```python3
 # Scraping iHerb using Selenium
@@ -149,14 +151,18 @@ driver_service = Service(executable_path=edge_driver_path)
 driver = webdriver.Edge(service=driver_service, options=edge_options)
 ```
 **Retry decorator**: handle intermittent failures during scraping.
+
 **Regex pattern**: match filenames like 'iHerb_catalogue YYYY-MM-DD.xlsx' or with (n)
 
 
 ## Step 3: Discover Pagination and Parse Product Cards
+
 We grab the number of pages from the category pagination UI, then parse each product card for core attributes. We also compute CAD→KRW with/without shipping.
 
 **Get the total number of pages**
+
 Scrape the total number of pages from the pagination section with custom retry logic
+
 ```python3
 def get_total_pages(url, max_retries=3, delay=2):
     """Scrape the total number of pages from the pagination section with custom retry logic."""
@@ -199,8 +205,10 @@ def get_total_pages(url, max_retries=3, delay=2):
 ```
 
 **Helpers for price parsing**
+
 Split price into currency and amount.
-For example, 'US$12.34' → ('US$', 12.34). Handles 'N/A' and missing values
+For example, 'CAD$12.34' → ('CAD$', 12.34). Handles 'N/A' and missing values
+
 ```python3
 def split_price(price):
     if price in ["Unavailable", "N/A", None, ""]:  # Unified handling for invalid prices
@@ -212,7 +220,9 @@ def split_price(price):
 ```
 
 **Scrape a single page**
+
 Selector note: For elements with multiple classes, use CSS selectors (not By.CLASS_NAME with dots).
+
 ```python3
 @retry(max_retries=3, delay=2)
 def scrape_page(url):
@@ -329,6 +339,7 @@ def scrape_page(url):
 ```
 
 ## Step 4: Paginate, Convert FX, and Save to Excel
+
 We’ll crawl the category pages, apply a **5% buffer** to CAD → KRW to be conservative, and export a deduplicated catalogue.
 
 ```python3
@@ -410,11 +421,15 @@ if failed_pages:
     print(f"Pages failed: {failed_pages}")
 ```
 **Why the buffer?**
+
 Market FX can move intraday. Padding +5% gives you a safety margin when comparing against KRW market prices.
 
 ## Step 5: Enrich with Naver Shopping Market Prices
+
 To gauge competitiveness, we fetch **Naver Shopping** results for each in‑stock product name, compute KRW price distribution with simple outlier removal, and join the stats back to your catalogue.
-**Security best practice**
+
+**Security best practice (Emphasizing it again!)**
+
 Store your Naver API credentials in environment variables (e.g., with python-dotenv) and never hard‑code secrets in your repo.
 
 ```python3
@@ -574,16 +589,19 @@ logging.info(f"Scraping Naver Market completed. Data saved to '{iherb_sale_naver
 ```
 
 **Outlier rule**
+
 We trim outside **Q1 − 1.5×IQR** and **Q3 + 1.5×IQR** to avoid extreme vendor listings distorting the mean and median.
 
 ## Step 6: Wrap‑Up and Teardown
+
 When the run completes, quit the driver to free system resources.
+
 ```python3
 driver.quit()
 ```
 
 
-**Final Thoughts**
+## Final Thoughts
 With a few hundred lines of Python, you’ve built a practical **catalogue pipeline**:
 - Collect iHerb product data + prices reliably with retries
 - Normalize prices to KRW and include realistic shipping scenarios
@@ -591,7 +609,7 @@ With a few hundred lines of Python, you’ve built a practical **catalogue pipel
 - Export clean, deduplicated Excel files with date‑stamped names
 This gives you a fast way to explore product opportunities and spot potential margins before going deeper into operations and logistics.
 
-**Bonus Tips**
+## Bonus Tips
 - **Respect rate limits**: Add small time.sleep() calls between page loads and API calls to avoid throttling.
 - **Periodic checkpoints**: Save intermediate CSV/Excel every N rows to protect long runs.
 - **More robust stats**: Consider trimmed means (e.g., 10%) or re‑computing quartiles after outlier removal for stability.
