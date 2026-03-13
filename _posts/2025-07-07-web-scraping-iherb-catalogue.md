@@ -610,6 +610,10 @@ When the run completes, quit the driver to free system resources.
 driver.quit()
 ```
 
+## I've just done scrapping all 26,000's nutrition supplements from iHerb.ca with their product related information (product_id, in-stock/out-of-stock, product name, regular and discounted price/rate, product link and product image).
+
+## Then all competitors in the 3rd party market places were studied by checking if no one is currently selling any iHerb product there. If there is anyone selling the product, the statistics of the sales-price and cost advantag were analyzed.
+
 
 ## Final Thoughts
 With a few hundred lines of Python, you’ve built a practical **catalogue pipeline**:
@@ -618,12 +622,3 @@ With a few hundred lines of Python, you’ve built a practical **catalogue pipel
 - Enrich with Naver Shopping market stats to understand competition
 - Export clean, deduplicated Excel files with date‑stamped names
 This gives you a fast way to explore product opportunities and spot potential margins before going deeper into operations and logistics.
-
-## Bonus Tips
-- **Respect rate limits**: Add small time.sleep() calls between page loads and API calls to avoid throttling.
-- **Periodic checkpoints**: Save intermediate CSV/Excel every N rows to protect long runs.
-- **More robust stats**: Consider trimmed means (e.g., 10%) or re‑computing quartiles after outlier removal for stability.
-- **SKU normalization**: If you expand, incorporate brand + size + count parsing to reduce false matches across marketplaces.
-- **Headless alternatives**: If headless becomes required, consider rotating residential proxies and full browser automation frameworks—but test carefully as sites may block.
-
-**Now you have a repeatable way to assemble a price‑aware iHerb catalogue for the Korean market.**
