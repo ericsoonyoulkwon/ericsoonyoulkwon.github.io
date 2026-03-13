@@ -10,7 +10,7 @@ As part of brainstorming the business process, I wanted to obtain a list of nutr
 
 Next, I planned to check whether other vendors are currently selling these products on a specific online marketplace platform, and if so, gather the relevant sales information.
 
-You’ll discover:
+I’ll introduce:
 
 - How to scrape iHerb product cards with Selenium (Edge) and capture key fields (name, brand, - link, prices, images, stock)
 - How to calculate KRW prices from CAD and include shipping scenarios
@@ -27,7 +27,7 @@ You’ll discover:
 Always review and respect each site’s Terms of Service and robots policies before scraping. Use responsible rate limits, identify your client politely, and avoid disrupting services.
 
 
-## Step 1: Set Up Selenium and Your Project
+## Step 1: Set Up Selenium and Project
 
 I've used **Microsoft Edge (Chromium)** with Selenium. iHerb blocks fully headless runs, so, I ran a regular browser session with a realistic User‑Agent and a few anti‑automation flags.
 
@@ -47,11 +47,11 @@ for package in packages:
     if result.returncode != 0:
         print(f"Installation failed for {package}: {result.stderr.decode('utf-8')}")
 ```
-**Tip**: Keep secrets (like API keys) in environment variables or a local .env file, not in your repo.
+**Tip**: Keep secrets (like API keys) in environment variables or a local .env file, not in repo.
 
 **Place the WebDriver**
 
-Download **msedgedriver.exe** that matches your Edge version and place it in a known folder (e.g., alongside your project scripts).
+Download **msedgedriver.exe** that matches Edge version and place it in a known folder (e.g., alongside the project scripts).
 
 Update in 2026: selenium version 4.* and above can automatically download the necessary web-driver and this step is not required.
 
@@ -429,16 +429,16 @@ if failed_pages:
 
 **Why the buffer?**
 
-Market FX can move intraday. Padding +5% gives you a safety margin when comparing against KRW market prices.
+Market FX can move intraday. Padding +5% gives a safety margin when comparing against KRW market prices.
 
 ## Step 5: Enrich with Naver Shopping Market Prices
 
-To gauge competitiveness, we fetch **Naver Shopping** results for each in‑stock product name, compute KRW price distribution with simple outlier removal, and join the stats back to your catalogue.
+To gauge competitiveness, we fetch **Naver Shopping** results for each in‑stock product name, compute KRW price distribution with simple outlier removal, and join the stats back to the iHerb catalogue.
 
 
 **Security best practice (Emphasizing it again!)**
 
-Store your Naver API credentials in environment variables (e.g., with python-dotenv) and never hard‑code secrets in your repo.
+Store the Naver API credentials in environment variables (e.g., with python-dotenv) and never hard‑code secrets in repo.
 
 ```python3
 # Scraping the price info from Naver Shopping and appending it to the iHerb catalogue.
@@ -616,9 +616,9 @@ driver.quit()
 
 
 ## Final Thoughts
-With a few hundred lines of Python, you’ve built a practical **catalogue pipeline**:
+With a few hundred lines of Python, I’ve built a practical **catalogue pipeline**:
 - Collect iHerb product data + prices reliably with retries
 - Normalize prices to KRW and include realistic shipping scenarios
 - Enrich with Naver Shopping market stats to understand competition
 - Export clean, deduplicated Excel files with date‑stamped names
-This gives you a fast way to explore product opportunities and spot potential margins before going deeper into operations and logistics.
+This enables a fast way to explore product opportunities and spot potential margins before going deeper into operations and logistics.
