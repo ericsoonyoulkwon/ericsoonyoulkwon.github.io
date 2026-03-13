@@ -48,6 +48,7 @@ for package in packages:
 **Tip**: Keep secrets (like API keys) in environment variables or a local .env file, not in your repo.
 
 **Place the WebDriver**
+
 Download **msedgedriver.exe** that matches your Edge version and place it in a known folder (e.g., alongside your project scripts).
 
 Update in 2026: selenium version 4.* and above can automatically download the necessary web-driver and this step is not required.
@@ -209,6 +210,7 @@ def get_total_pages(url, max_retries=3, delay=2):
 **Helpers for price parsing**
 
 Split price into currency and amount.
+
 For example, 'CAD$12.34' → ('CAD$', 12.34). Handles 'N/A' and missing values
 
 ```python3
@@ -422,6 +424,7 @@ if all_products:
 if failed_pages:
     print(f"Pages failed: {failed_pages}")
 ```
+
 **Why the buffer?**
 
 Market FX can move intraday. Padding +5% gives you a safety margin when comparing against KRW market prices.
@@ -429,6 +432,7 @@ Market FX can move intraday. Padding +5% gives you a safety margin when comparin
 ## Step 5: Enrich with Naver Shopping Market Prices
 
 To gauge competitiveness, we fetch **Naver Shopping** results for each in‑stock product name, compute KRW price distribution with simple outlier removal, and join the stats back to your catalogue.
+
 
 **Security best practice (Emphasizing it again!)**
 
@@ -590,9 +594,11 @@ iherb_sale_naver_srch.to_excel(iherb_sale_naver_srch_file_path, index=False)
 logging.info(f"Scraping Naver Market completed. Data saved to '{iherb_sale_naver_srch_file_path}'")
 ```
 
+
 **Outlier rule**
 
 We trim outside **Q1 − 1.5×IQR** and **Q3 + 1.5×IQR** to avoid extreme vendor listings distorting the mean and median.
+
 
 ## Step 6: Wrap‑Up and Teardown
 
