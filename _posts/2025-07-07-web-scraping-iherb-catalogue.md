@@ -610,9 +610,9 @@ When the run completes, quit the driver to free system resources.
 driver.quit()
 ```
 
-## I've just done scrapping all 26,000's nutrition supplements from iHerb.ca with their product related information (product_id, in-stock/out-of-stock, product name, regular and discounted price/rate, product link and product image).
+**I've just done scrapping all 26,000's nutrition supplements from iHerb.ca with their product related information (product_id, in-stock/out-of-stock, product name, regular and discounted price/rate, product link and product image).**
 
-## Then all competitors in the 3rd party market places were studied by checking if no one is currently selling any iHerb product there. If there is anyone selling the product, the statistics of the sales-price and cost advantag were analyzed.
+**Then all competitors in the 3rd party market places were studied by checking if no one is currently selling any iHerb product there. If there is anyone selling the product, the statistics of the sales-price and cost advantag were analyzed.**
 
 
 ## Final Thoughts
