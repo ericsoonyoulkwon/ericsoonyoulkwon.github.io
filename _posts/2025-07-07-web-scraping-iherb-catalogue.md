@@ -21,6 +21,7 @@ You’ll discover:
 
 **Ethics & Legal Note**
 
+
 Always review and respect each site’s Terms of Service and robots policies before scraping. Use responsible rate limits, identify your client politely, and avoid disrupting services.
 
 
