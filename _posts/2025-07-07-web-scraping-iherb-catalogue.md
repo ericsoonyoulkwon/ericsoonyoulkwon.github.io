@@ -19,6 +19,8 @@ You’ll discover:
 - How to query Naver Shopping for market prices, remove outliers, and compute useful stats
 - How to compare iHerb landed cost vs. market prices to spot potential margin
 
+
+
 **Ethics & Legal Note**
 
 
