@@ -1,5 +1,3 @@
-Analytics Specialist
-
 - Data Analytics and Data Science
 - Automation Innovator
 - Analytics Strategy
