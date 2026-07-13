@@ -1,8 +1,13 @@
-# Last cell with value – Array and Xlookup
+---
+layout: post
+title: "Last cell with value – Array and Xlookup"
+date: 2023-05-31 00:00:00 +0000
+categories: [MS Excel and VBA]
+---
 
 How to find the value of the last non-empty cell
 
-#### Category: MS Excel & VBA
+
 
 ---
 

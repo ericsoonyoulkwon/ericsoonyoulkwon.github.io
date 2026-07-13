@@ -1,7 +1,8 @@
-# Selecting data transacted on previous business day
-
-#### Category: SQL
-
+---
+layout: post
+title: "Selecting data transacted on previous business day"
+date: 2023-06-02 00:00:00 +0000
+categories: [SQL]
 ---
 
 ### CASE and WHEN in WHERE clause

@@ -1,7 +1,8 @@
-# Web Scraping to Create a Catalogue of iHerb Nutrition Supplements
-
-#### Category: Python
-
+---
+layout: post
+title: "Web Scraping to Create a Catalogue of iHerb Nutrition Supplements"
+date: 2025-07-07 00:00:00 +0000
+categories: [Python]
 ---
 
 I had a business idea to sell iHerb products to customers in South Korea.
@@ -21,7 +22,7 @@ I’ll introduce:
 
 
 
-**Ethics & Legal Note**
+**Ethics &amp; Legal Note**
 
 
 Always review and respect each site’s Terms of Service and robots policies before scraping. Use responsible rate limits, identify your client politely, and avoid disrupting services.
@@ -445,7 +446,7 @@ Store the Naver API credentials in environment variables (e.g., with python-dote
 import requests, numpy as np
 
 # Filter to items with prices and not out of stock
-in_stock_df = df[(df["out_of_stock"] == "False") & (df["reg_price_CAD"] > 0)].copy()
+in_stock_df = df[(df["out_of_stock"] == "False") &amp; (df["reg_price_CAD"] > 0)].copy()
 in_stock_df["discount_rate"] = in_stock_df["discount_rate"].str.replace("%", "").astype(float)
 
 # --- Secrets (use env vars or .env) for API credential ---
@@ -502,7 +503,7 @@ for _, row in tqdm(limited_in_stock_df.iterrows(), total=limited_in_stock_df.sha
                         lower_bound = Q1 - 1.5 * IQR
                         upper_bound = Q3 + 1.5 * IQR
 
-                        price_no_outliers = lprice[(lprice >= lower_bound) & (lprice <= upper_bound)]
+                        price_no_outliers = lprice[(lprice >= lower_bound) &amp; (lprice <= upper_bound)]
                         
                         mean_price = price_no_outliers.mean()
                         rounded_mean_price = None if np.isnan(mean_price) else math.ceil(mean_price * 100) / 100
@@ -612,12 +613,12 @@ driver.quit()
 
 **I've just done scrapping all 26,000's nutrition supplements from iHerb.ca with their product related information (product_id, in-stock/out-of-stock, product name, regular and discounted price/rate, product link and product image).**
 
-  ![name-split-formula](/images/iHerb_cat.png)
+  ![Scraped iHerb Product Catalogue Excel Output](/images/iHerb_cat.png)
 
 
 **Then all competitors in the 3rd party market places were studied by checking if no one is currently selling any iHerb product there. If there is anyone selling the product, the statistics of the sales-price and cost advantag were analyzed.**
 
-  ![name-split-formula](/images/car_enriched_naver.png)
+  ![Naver Shopping Price Comparison Sheet](/images/car_enriched_naver.png)
   
 
 ## Final Thoughts

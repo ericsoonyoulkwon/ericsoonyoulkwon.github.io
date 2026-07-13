@@ -1,7 +1,8 @@
-# String Reconciliation in Excel
-
-#### Category: MS Excel & VBA
-
+---
+layout: post
+title: "String Reconciliation in Excel"
+date: 2023-06-19 00:00:00 +0000
+categories: [MS Excel and VBA]
 ---
 
 ### Comparing string data for differences

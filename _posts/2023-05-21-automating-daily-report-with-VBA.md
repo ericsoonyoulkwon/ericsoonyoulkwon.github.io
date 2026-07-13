@@ -1,8 +1,13 @@
-# Automating daily reports with VBA
+---
+layout: post
+title: "Automating daily reports with VBA"
+date: 2023-05-21 00:00:00 +0000
+categories: [MS Excel and VBA]
+---
 
 Writing a macro to automate folder editing and Excel reports because I want to avoid doing it manually every day!
 
-#### Category: MS Excel & VBA
+
 
 ---
 
@@ -46,16 +51,16 @@ Then I defined the directory of the folder where the new daily folders are saved
 
 ```
 PathName = "K:\the directory of the folder that I am checking\"
-FolderName = MonthName(DatePart("m", Date), False) & _
-    " " & Day(Date) & _
-    " " & DatePart("yyyy", Date) & _
+FolderName = MonthName(DatePart("m", Date), False) &amp; _
+    " " &amp; Day(Date) &amp; _
+    " " &amp; DatePart("yyyy", Date) &amp; _
     " - M"
 ```
 
 Now I **call the function** that I just created to check if the directory of the folder with today’s date exists or not. If it doesn’t exist and the function returns False, it will proceed with the code that I write in the section after ‘Then’. Otherwise, it will prompt a message box to tell me the folder already exists with no further actions.
 
 ```
-If Not FolderExists(PathName & FolderName) Then
+If Not FolderExists(PathName &amp; FolderName) Then
     'code to be executed when there is no folder with the same name
 Else
     MsgBox ("Folder for today already exists.")
@@ -70,9 +75,9 @@ After concatenating PathName and FolderName, I am creating a folder. (i.e. “K:
 
 ```
 Set fso = CreateObject("scripting.filesystemobject")
-fso.CreateFolder PathName & FolderName
+fso.CreateFolder PathName &amp; FolderName
 
-Call Shell("explorer.exe" & " " & PathName & FolderName, vbNormalFocus)
+Call Shell("explorer.exe" &amp; " " &amp; PathName &amp; FolderName, vbNormalFocus)
 ```
 
 #### The folder is created. Now what? Gotta finish the report!
@@ -86,7 +91,7 @@ The template is pasted to the folder just created and named with the date at the
 Application.ScreenUpdating = False
 
 Template = "K:\where I saved the template to be uploaded\the name of the template file.xlsm"
-NewFile = PathName & FolderName & "\the name of the template file-" & Format(Now, "YYYYMMDD") & ".xlsm"
+NewFile = PathName &amp; FolderName &amp; "\the name of the template file-" &amp; Format(Now, "YYYYMMDD") &amp; ".xlsm"
 
 FileCopy Template, NewFile
 ```
@@ -107,10 +112,10 @@ lastRowCopy = wsCopy.Worksheets("Query").Cells(Rows.Count, 1).End(xlUp).Row
 lastRowDest = wsDest.Worksheets("Report").Cells(Rows.Count, 1).End(xlUp).Row
 
 If lastRowDest > 2 Then _
-    wsDest.Worksheets("Report").Range("A2:N" & lastRowDest).EntireRow.Delete
+    wsDest.Worksheets("Report").Range("A2:N" &amp; lastRowDest).EntireRow.Delete
 If lastRowCopy > 2 Then _
-    wsCopy.Worksheets("Query").Range("A2:N" & lastRowCopy).Copy _
-    wsDest.Worksheets("Report").Range("A2:N" & lastRowCopy).PasteSpecial _
+    wsCopy.Worksheets("Query").Range("A2:N" &amp; lastRowCopy).Copy _
+    wsDest.Worksheets("Report").Range("A2:N" &amp; lastRowCopy).PasteSpecial _
         Paste:=xlPasteValues
 ```
 
@@ -119,7 +124,7 @@ When the client requires to use the same file name for the PDF version, I take t
 ```
 With wsDest
     ThisFile = Left(ActiveWorkbook.Name, Len(ActiveWorkbook.Name) - 5)
-    SvAs = PathName & FolderName & "\" & ThisFile & ".pdf" _
+    SvAs = PathName &amp; FolderName &amp; "\" &amp; ThisFile &amp; ".pdf" _
         .ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, FileName:=SvAs, _
         Quality:=xlQualityStandard, IncludeDocProperties:=False, _
         IgnorePrintAreas:=False, OpenAfterPublish:=True
@@ -139,7 +144,7 @@ Application.EnableEvents = False
 
 inbound_date = Format(Evaluate("WORKDAY(TODAY(),-1,Days_off!A:A)"), "YYYYMMDD")
 XML_location = "\\location where the XML files are saved\"
-Set inbound_xml = Workbooks.OpenXML(FileName:=XML_location & "name of the XML file" & inbound_date & ".xml", LoadOption:=xlXmlLoadImportToList)
+Set inbound_xml = Workbooks.OpenXML(FileName:=XML_location &amp; "name of the XML file" &amp; inbound_date &amp; ".xml", LoadOption:=xlXmlLoadImportToList)
 lRow_inbound = Cells(Rows.Count, 9).End(xlUp).Row
     
 inbound_records_count = 0
@@ -166,7 +171,7 @@ Set report = wsDest.Worksheets("Report")
 records_processed = 0
     For p = 2 To lastRowCopy
         duplicates = Application.WorksheetFunction. _
-            CountIf(report.Range("A2:A" & lastRowCopy), report.Cells(p, 1))
+            CountIf(report.Range("A2:A" &amp; lastRowCopy), report.Cells(p, 1))
         If duplicates > 1 Then
             records_processed = records_processed + (1 / duplicates)
         ElseIf duplicates = 1 Then
@@ -209,12 +214,12 @@ Application.ScreenUpdating = True
 wsCopy.Worksheets("Report completed").Activate
 Application.SendKeys ("{NUMLOCK}")
         
-MsgBox ("Daily Response Report for " & FolderName & " was successfully created." & vbCrLf & "Please perform the following" & vbCrLf _
-& "   - confirm the pdf = excel" & vbCrLf _
-& "   - reconcile ToDo's" & vbCrLf _
-& "   - upload via sFTP" & vbCrLf & vbCrLf _
-& "Records received through interface: " & inbound_records_count & vbCrLf _
-& "Records processed by application: " & records_processed)
+MsgBox ("Daily Response Report for " &amp; FolderName &amp; " was successfully created." &amp; vbCrLf &amp; "Please perform the following" &amp; vbCrLf _
+& "   - confirm the pdf = excel" &amp; vbCrLf _
+& "   - reconcile ToDo's" &amp; vbCrLf _
+& "   - upload via sFTP" &amp; vbCrLf &amp; vbCrLf _
+& "Records received through interface: " &amp; inbound_records_count &amp; vbCrLf _
+& "Records processed by application: " &amp; records_processed)
 ```
 
 ```

@@ -1,8 +1,13 @@
-# Mapping PK and FK relationships
+---
+layout: post
+title: "Mapping PK and FK relationships"
+date: 2023-06-14 00:00:00 +0000
+categories: [SQL]
+---
 
 Is using the ‘fk_’ prefix in column names good or bad?
 
-#### Category: SQL
+
 
 ---
 

@@ -20,6 +20,9 @@ linkedin_username: "eric-kwon-yyz"
 #########################################################################################
 theme: "minima"
 
+url: "https://ericsoonyoulkwon.github.io"
+baseurl: ""
+
 rss: rss
 
 kramdown:

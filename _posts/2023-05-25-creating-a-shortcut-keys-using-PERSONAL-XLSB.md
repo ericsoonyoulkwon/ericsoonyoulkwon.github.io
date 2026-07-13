@@ -1,7 +1,8 @@
-# Creating shortcut keys using PERSONAL.XLSB
-
-#### Category: MS Excel & VBA
-
+---
+layout: post
+title: "Creating shortcut keys using PERSONAL.XLSB"
+date: 2023-05-25 00:00:00 +0000
+categories: [MS Excel and VBA]
 ---
 
 ### Ways that I use to help audiences process what they see on the screen a lot better

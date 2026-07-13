@@ -1,8 +1,13 @@
-# How I started office automation
+---
+layout: post
+title: "How I started office automation"
+date: 2023-06-23 00:00:00 +0000
+categories: [Diaries and Journals]
+---
 
 Throwback – My first job
 
-#### Category: Diaries & Journals
+
 
 ---
 

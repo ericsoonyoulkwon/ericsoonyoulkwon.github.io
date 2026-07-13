@@ -1,3 +1,11 @@
+/* Professional Typography and Background */
+body {
+  /* Modern, highly readable professional font stack */
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #2d3436; /* Darker, professional text color */
+  line-height: 1.6;
+}
+
 hr {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -46,9 +54,11 @@ hr {
 
 /* === Inverted Cursor (white with black outline) === */
 body {
-  cursor: url("data:image/svg+xml;utf8,
-    <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>
-      <polygon points='0,0 0,32 10,22 16,30 20,28 14,20 24,20'
-        fill='white' stroke='black' stroke-width='2'/>
-    </svg>") 0 0, auto;
+  cursor: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2732%27%20height%3D%2732%27%3E%3Cpolygon%20points%3D%270%2C0%200%2C32%2010%2C22%2016%2C30%2020%2C28%2014%2C20%2024%2C20%27%20fill%3D%27white%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E") 0 0, auto;
 }
+
+/* Hide unwanted footer content */
+.footer-heading, .footer-col-3 p {
+  display: none !important;
+}
+

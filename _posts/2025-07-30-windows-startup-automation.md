@@ -1,7 +1,8 @@
-# Windows 11 Startup Automation: Open Everything You Need Right When You Log In
-
-#### Category: Productivity
-
+---
+layout: post
+title: "Windows 11 Startup Automation: Open Everything You Need Right When You Log In"
+date: 2025-07-30 00:00:00 +0000
+categories: [Productivity]
 ---
 
 Do you find yourself launching the same apps, folders, and websites every morning after starting your PC? What if you could skip all those clicks and let your computer handle it for you?
@@ -37,7 +38,7 @@ To automate file or folder opening, we’ll place shortcuts into this folder, ra
 
 3. Press Enter
    
-  ![name-split-formula](/images/shell-startup.png)
+  ![Shell Startup Directory Screenshot](/images/shell-startup.png)
 
 ### How to Create a Shortcut to Any File or Folder
 
@@ -53,7 +54,7 @@ You need to move the shortcuts to the startup folder you just opened. If you’r
 
 4. Select Create shortcut.
    
-  ![name-split-formula](/images/create-shortcut.png)
+  ![Creating a Windows Shortcut Screenshot](/images/create-shortcut.png)
 
 A shortcut named “Outlook - Shortcut” will appear in the Desktop.
 
@@ -69,7 +70,7 @@ Once your shortcuts are created:
 
 4. Right-click inside the folder → Paste
 
-  ![name-split-formula](/images/startup-folder.png)
+  ![Windows Startup Folder Directory](/images/startup-folder.png)
 
 That’s it! When you log in next time, these items will open automatically — no manual clicks required.
 
@@ -129,7 +130,7 @@ A batch file avoids the character limit and gives you full control over how and 
 
 5. Move the shortcut into the Startup folder
 
-  ![name-split-formula](/images/chrome-tabs-shortcut.png)
+  ![Chrome Multiple Tabs Properties](/images/chrome-tabs-shortcut.png)
 
 Now Chrome will launch once, with all your sites opened as tabs in a single window — just the way it should.
 
