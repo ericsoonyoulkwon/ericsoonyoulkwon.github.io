@@ -2,11 +2,11 @@
 layout: home
 ---
 
-* **Data Analytics and Data Science** — Building robust data models and insights.
-* **Automation Innovator** — Engineering scripts to streamline complex workflows.
-* **Analytics Strategy** — Designing frameworks to leverage data for structural goals.
-* **Data Governance & Quality** — Securing reliability, compliance, and standards.
-* **Continuous Improvement Leadership** — Driving process optimization through data.
+* **Data Analytics & Data Science** — Building robust models and actionable insights.
+* **Automation & Process Innovation** — Streamlining complex workflows through intelligent automation.
+* **Business Intelligence & Analytics Strategy** — Designing frameworks to leverage data and achieve strategic objectives.
+* **Data Governance & Quality** — Ensuring reliable, trusted, and decision-ready data..
+* **Continuous Improvement Leadership** — Driving performance excellence through analytics.
 
 ---
 
