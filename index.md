@@ -9,4 +9,4 @@ layout: home
 * **Continuous Improvement Leadership** — Driving performance excellence through analytics.
 
 ---
-
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}" target="_blank" rel="noopener noreferrer">via RSS</a></p>
